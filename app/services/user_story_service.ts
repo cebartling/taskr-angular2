@@ -1,10 +1,11 @@
 export class UserStoryService {
-    names = ['Dijkstra', 'Knuth', 'Turing', 'Hopper'];
+    userStories = [];
 
     get(): string[] {
-        return this.names;
+        return this.userStories;
     }
+
     add(value: string): void {
-        this.names.push(value);
+        this.userStories.push(value);
     }
 }

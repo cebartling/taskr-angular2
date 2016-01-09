@@ -1,12 +1,12 @@
 var UserStoryService = (function () {
     function UserStoryService() {
-        this.names = ['Dijkstra', 'Knuth', 'Turing', 'Hopper'];
+        this.userStories = [];
     }
     UserStoryService.prototype.get = function () {
-        return this.names;
+        return this.userStories;
     };
     UserStoryService.prototype.add = function (value) {
-        this.names.push(value);
+        this.userStories.push(value);
     };
     return UserStoryService;
 })();
