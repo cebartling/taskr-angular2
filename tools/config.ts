@@ -18,7 +18,7 @@ export const HOT_LOADER_PORT      = 5578;
 
 export const BOOTSTRAP_MODULE     = ENABLE_HOT_LOADING ? 'hot_loader_bootstrap' : 'bootstrap';
 
-export const APP_TITLE            = 'My Angular2 App';
+export const APP_TITLE            = 'Taskr';
 
 export const APP_SRC              = 'app';
 export const ASSETS_SRC           = `${APP_SRC}/assets`;
@@ -53,9 +53,9 @@ export const NPM_DEPENDENCIES = [
   { src: 'angular2/bundles/angular2.min.js', inject: 'libs', dest: LIB_DEST },
   { src: 'angular2/bundles/router.js', inject: 'libs', dest: LIB_DEST }, // use router.min.js with alpha47
   { src: 'angular2/bundles/http.min.js', inject: 'libs', dest: LIB_DEST },
+  { src: 'jquery/dist/jquery.min.js', inject: 'libs', dest: LIB_DEST },
   { src: 'materialize-css/dist/js/materialize.min.js', inject: 'libs', dest: LIB_DEST },
 
-  //{ src: 'bootstrap/dist/css/bootstrap.min.css', inject: true, dest: CSS_DEST },
   { src: 'materialize-css/dist/css/materialize.min.css', inject: true, dest: CSS_DEST }
 ];
 

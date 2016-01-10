@@ -11,7 +11,7 @@ exports.APP_BASE = yargs_1.argv['base'] || '/';
 exports.ENABLE_HOT_LOADING = !!yargs_1.argv['hot-loader'];
 exports.HOT_LOADER_PORT = 5578;
 exports.BOOTSTRAP_MODULE = exports.ENABLE_HOT_LOADING ? 'hot_loader_bootstrap' : 'bootstrap';
-exports.APP_TITLE = 'My Angular2 App';
+exports.APP_TITLE = 'Taskr';
 exports.APP_SRC = 'app';
 exports.ASSETS_SRC = exports.APP_SRC + "/assets";
 exports.TOOLS_DIR = 'tools';
@@ -38,6 +38,7 @@ exports.NPM_DEPENDENCIES = [
     { src: 'angular2/bundles/angular2.min.js', inject: 'libs', dest: exports.LIB_DEST },
     { src: 'angular2/bundles/router.js', inject: 'libs', dest: exports.LIB_DEST },
     { src: 'angular2/bundles/http.min.js', inject: 'libs', dest: exports.LIB_DEST },
+    { src: 'jquery/dist/jquery.min.js', inject: 'libs', dest: exports.LIB_DEST },
     { src: 'materialize-css/dist/js/materialize.min.js', inject: 'libs', dest: exports.LIB_DEST },
     { src: 'materialize-css/dist/css/materialize.min.css', inject: true, dest: exports.CSS_DEST }
 ];

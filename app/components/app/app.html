@@ -1,8 +1,54 @@
-<section class="sample-app-content">
-  <nav>
-    <a [routerLink]="['/Home']">Home</a>
-    <a [routerLink]="['/About']">About</a>
-  </nav>
+<nav class="blue-grey lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Taskr</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a [routerLink]="['/About']">About</a></li>
+        </ul>
 
-  <router-outlet></router-outlet>
-</section>
+        <ul id="nav-mobile" class="side-nav">
+            <li><a [routerLink]="['/About']">About</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer class="page-footer blue-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="orange-text">About</h5>
+                <p class="orange-text text-lighten-4">
+                    Taskr is a sample web application that uses TypeScript, Angular 2, MaterialCSS, and RxJS.
+                </p>
+
+            </div>
+
+            <div class="col l3 s12">
+                <h5 class="orange-text">Settings</h5>
+                <ul>
+                    <li><a class="orange-text text-lighten-2" href="#!">Link 1</a></li>
+                    <li><a class="orange-text text-lighten-2" href="#!">Link 2</a></li>
+                    <li><a class="orange-text text-lighten-2" href="#!">Link 3</a></li>
+                    <li><a class="orange-text text-lighten-2" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="orange-text">Connect</h5>
+                <ul>
+                    <li><a class="orange-text text-lighten-2" href="#!">Link 1</a></li>
+                    <li><a class="orange-text text-lighten-2" href="#!">Link 2</a></li>
+                    <li><a class="orange-text text-lighten-2" href="#!">Link 3</a></li>
+                    <li><a class="orange-text text-lighten-2" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        </div>
+    </div>
+
+</footer>
