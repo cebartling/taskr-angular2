@@ -11,7 +11,9 @@ var core_1 = require('angular2/core');
 var router_1 = require('angular2/router');
 var home_1 = require('../home/home');
 var about_1 = require('../about/about');
+var user_story_form_1 = require('../user_story/user_story_form');
 var name_list_1 = require('../../services/name_list');
+var user_story_service_1 = require('../../services/user_story_service');
 var AppCmp = (function () {
     function AppCmp() {
     }
@@ -19,6 +21,7 @@ var AppCmp = (function () {
         core_1.Component({
             selector: 'app',
             viewProviders: [name_list_1.NameList],
+            providers: [user_story_service_1.UserStoryService],
             templateUrl: './components/app/app.html',
             styleUrls: ['./components/app/app.css'],
             encapsulation: core_1.ViewEncapsulation.None,
@@ -26,7 +29,8 @@ var AppCmp = (function () {
         }),
         router_1.RouteConfig([
             { path: '/', component: home_1.HomeCmp, as: 'Home' },
-            { path: '/about', component: about_1.AboutCmp, as: 'About' }
+            { path: '/about', component: about_1.AboutCmp, as: 'About' },
+            { path: '/userStoryForm', component: user_story_form_1.UserStoryFormCmp, as: 'UserStoryForm' }
         ]), 
         __metadata('design:paramtypes', [])
     ], AppCmp);
