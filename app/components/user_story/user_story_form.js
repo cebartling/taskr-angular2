@@ -9,16 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('angular2/core');
 var user_story_service_1 = require('../../services/user_story_service');
+var user_story_1 = require('../../models/user_story');
 var UserStoryFormCmp = (function () {
-    function UserStoryFormCmp(_userStoryService) {
-        this._userStoryService = _userStoryService;
-        this.title = '';
+    function UserStoryFormCmp(userStoryService) {
+        this.userStoryService = userStoryService;
+        this.model = new user_story_1.UserStory('Untitled!');
     }
+    UserStoryFormCmp.prototype.onSubmit = function () {
+        this.userStoryService.save(this.model);
+    };
     UserStoryFormCmp = __decorate([
         core_1.Component({
             selector: 'userStoryForm',
             templateUrl: './components/user_story/user_story_form.html',
-            styleUrls: ['./components/user_story/user_story_form.css']
+            styleUrls: ['./components/user_story/user_story_form.css'],
+            providers: [user_story_service_1.UserStoryService],
+            bindings: [user_story_service_1.UserStoryService]
         }), 
         __metadata('design:paramtypes', [user_story_service_1.UserStoryService])
     ], UserStoryFormCmp);
