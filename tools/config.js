@@ -38,7 +38,8 @@ exports.NPM_DEPENDENCIES = [
     { src: 'angular2/bundles/angular2.min.js', inject: 'libs', dest: exports.LIB_DEST },
     { src: 'angular2/bundles/router.js', inject: 'libs', dest: exports.LIB_DEST },
     { src: 'angular2/bundles/http.min.js', inject: 'libs', dest: exports.LIB_DEST },
-    { src: 'bootstrap/dist/css/bootstrap.min.css', inject: true, dest: exports.CSS_DEST }
+    { src: 'materialize-css/dist/js/materialize.min.js', inject: 'libs', dest: exports.LIB_DEST },
+    { src: 'materialize-css/dist/css/materialize.min.css', inject: true, dest: exports.CSS_DEST }
 ];
 exports.APP_ASSETS = [
     { src: exports.ASSETS_SRC + "/main.css", inject: true, dest: exports.CSS_DEST }
